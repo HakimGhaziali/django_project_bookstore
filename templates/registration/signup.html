@@ -1,5 +1,8 @@
 {% extends '_base.html' %}
 
+
+{% load crispy_forms_tags %}
+
 {% block page_title %}
 sign up
 {% endblock page_title %}
@@ -11,7 +14,7 @@ sign up
       {% csrf_token %}
       
 
-      {{form.as_p}}
+      {{form|crispy }}
       <button type="submit" class="btn btn-primary">log in</button>'
 
  
