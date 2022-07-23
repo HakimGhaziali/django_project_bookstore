@@ -19,7 +19,9 @@ hhhhhhh
 
 
 <a href="{{ book.get_absolute_url }}">     <h1> {{book.title}} </h1> </a>
-
+<br>
 {% endfor %}
+
+<a href="{% url 'book_create' %}">     <h1> اضافه کردن کتاب جدید </h1> </a>
 
 {% endblock content %}

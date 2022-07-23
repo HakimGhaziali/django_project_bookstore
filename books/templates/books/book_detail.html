@@ -18,5 +18,10 @@
 {{books.price}}
 {{books.content}}
 
+
+<br>
+
 <a href="{% url 'book_list'%}"> بازگشت </a>
+<br>
+<a href="{% url 'book_update' books.id %}"> تغییرات </a>
 {% endblock content %}

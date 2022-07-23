@@ -1,0 +1,25 @@
+{% extends '_base.html' %}
+
+
+{% load crispy_forms_tags %}
+
+{% block page_title %}
+ویراایش کتاب 
+{% endblock page_title %}
+
+
+{% block content %}
+
+    <form action="" method="post">
+      {% csrf_token %}
+      
+
+      {{form|crispy }}
+      <button type="submit" class="btn btn-primary">log in</button>'
+
+ 
+    </form>
+    <br>
+
+    <a href="{% url 'book_list' %}">     <h1> اضافه کردن کتاب جدید </h1> </a>
+{% endblock content %} 

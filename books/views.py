@@ -17,3 +17,16 @@ class BookDetailView(generic.DetailView):
     model = Book
     template_name= 'books/book_detail.html'
     context_object_name = 'books'
+
+
+class BookCreate(generic.CreateView):
+
+    model= Book
+    fields= ['title','authors','content','price']
+    template_name = 'books/book_create.html'
+
+class BookUpdate(generic.UpdateView):
+
+    model= Book
+    fields=['title','authors','content','price']
+    template_name='books/book_update.html'
