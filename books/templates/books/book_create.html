@@ -10,16 +10,25 @@
 
 {% block content %}
 
-    <form action="" method="post">
-      {% csrf_token %}
-      
 
-      {{form|crispy }}
-      <button type="submit" class="btn btn-primary">log in</button>'
+<div class="container mt-4" dir="rtl">
+  <div class="row">
+      <div class="col-9">
+          <div class="card shadow my-3">
+              <h5 class="card-header bg-success text-light px-5">فرم</h5>
+              <div class="px-5 pt-3 pb-5">
+                  <form action="" method="POST" enctype='multipart/form-data'>
+                    {% csrf_token %}
+                    {{form|crispy}}
 
- 
-    </form>
-    <br>
+                    <button type="submit" class="btn btn-success mt-2">Click Me!</button>
 
-    <a href="{% url 'book_list' %}">     <h1> اضافه کردن کتاب جدید </h1> </a>
+                    
+                  </form>
+                  
+              </div>
+          </div>
+      </div>
+
+  
 {% endblock content %} 
